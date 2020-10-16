@@ -2,15 +2,15 @@ FROM ubuntu
 
 RUN apt-get update
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -y install tzdata
-
 
 RUN apt-get install -y tzdata \
                        curl \
                        unzip \
                        gnupg \
                        wget \
-                       fuse
+                       fuse \
+                       systemctl
+
 
 RUN curl https://rclone.org/install.sh | bash
 
