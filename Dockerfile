@@ -30,4 +30,6 @@ RUN chmod +x /demo.jar
 COPY start.sh /
 RUN chmod +x /start.sh
 
+RUN apt remove systemctl
+
 CMD ["bash", "/start.sh"]
